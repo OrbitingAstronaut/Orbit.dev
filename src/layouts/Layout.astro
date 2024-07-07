@@ -1,8 +1,8 @@
 ---
+import { Astro } from "@astro/types";
 export interface Props {
     title: string;
 }
-
 const { title } = Astro.props;
 ---
 
@@ -21,25 +21,31 @@ const { title } = Astro.props;
     <meta content="#ba132d" data-react-helmet="true" name="theme-color" />
     <title>{title}</title>
     <link rel="me" href="https://floss.social/@O4bit">
+    <style>
+        body {
+            margin: 0; /* Remove default margin */
+            font-family: Arial, sans-serif; /* Optional: Set your preferred font */
+        }
+        .background-animate {
+            background-image: url('https://cdn.discordapp.com/attachments/1074435296978026588/1259584355421126779/ezgif-3-5114a63fef.gif?ex=668c36d8&is=668ae558&hm=e207ca7dcfca144211ed09c375e5475c393141d6731ebf244954e2e450a02752&');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Keeps background fixed while scrolling */
+            /* Add any other background-related styles here */
+        }
+        /* Adjust iframe styles */
+        iframe {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border: none;
+            overflow: hidden;
+            z-index: 9999;
+        }
+    </style>
 </head>
-
-<style>
-.background-animate {
-    background-image: url('https://cdn.discordapp.com/attachments/1074435296978026588/1259584355421126779/ezgif-3-5114a63fef.gif?ex=668c36d8&is=668ae558&hm=e207ca7dcfca144211ed09c375e5475c393141d6731ebf244954e2e450a02752&');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* optional: keeps background fixed while scrolling */
-    /* Add any other background-related styles here */
-}
-
-    /* Additional styles for iframe */
-    iframe {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        border: none;
-        overflow: hidden;
-        z-index: 9999;
-    }
-</style>
+<body class="background-animate fixed h-screen">
+    <slot />
+</body>
+</html>
