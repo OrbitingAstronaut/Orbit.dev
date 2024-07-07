@@ -1,10 +1,10 @@
----
 import { Astro } from "@astro/types";
+
 export interface Props {
     title: string;
 }
+
 const { title } = Astro.props;
----
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,11 +13,6 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1074435296978026588/1254337465137893446/ezgif-7-2eaf8a8b05.gif?ex=668b954c&is=668a43cc&hm=4df297125c897218beba07d28f2d96687be5572ae70df25d917c33f53dcb6bb6&" />
     <meta name="description" content="Orbit's Website" />
-    <meta property="og:title" content="{title}" />
-    <meta property="og:description" content="Orbit's Website" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://orbitingastronautdev-orbitingastronauts-projects.vercel.app/" />
-    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1074435296978026588/1259584355421126779/ezgif-3-5114a63fef.gif?ex=668c36d8&is=668ae558&hm=e207ca7dcfca144211ed09c375e5475c393141d6731ebf244954e2e450a02752&" />
     <meta name="theme-color" content="#ba132d" />
     <title>{title}</title>
     <link rel="me" href="https://floss.social/@O4bit">
@@ -67,11 +62,5 @@ const { title } = Astro.props;
         }
     </style>
 </head>
-<body>
-    <div class="content-wrapper">
-        <h1>{title}</h1>
-        <p>Welcome to Orbit's Website</p>
-        <a href="https://orbitingastronautdev-orbitingastronauts-projects.vercel.app/" target="_blank" rel="noopener noreferrer">Visit Website</a>
-    </div>
-</body>
 </html>
+
