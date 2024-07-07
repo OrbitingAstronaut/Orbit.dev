@@ -22,37 +22,16 @@ const { title } = Astro.props;
     <title>{title}</title>
     <link rel="me" href="https://floss.social/@O4bit">
 </head>
-<body class="fixed h-screen">
-    <div class="w-screen h-screen flex bg-gradient-to-r from-[#12c2e9] via-[#c471ed] to-[#f64f59] background-animate">
-        <slot />
-    </div>
-
-    <!-- Discord Widget Integration -->
-    <iframe src="https://discord.com/widget?id=1217882427280855111&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-</body>
-</html>
 
 <style>
-    [data-icon] {
-        font-size: 2rem;
-    }
-
-    .background-animate {
-        background-size: 400%;
-
-        -webkit-animation: GradientAnimation 20s ease infinite;
-        -moz-animation: GradientAnimation 20s ease infinite;
-        animation: GradientAnimation 20s ease infinite;
-    }
-
-    @keyframes GradientAnimation {
-        0%, 100% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-    }
+.background-animate {
+    background-image: url('https://cdn.discordapp.com/attachments/1074435296978026588/1259584355421126779/ezgif-3-5114a63fef.gif?ex=668c36d8&is=668ae558&hm=e207ca7dcfca144211ed09c375e5475c393141d6731ebf244954e2e450a02752&');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* optional: keeps background fixed while scrolling */
+    /* Add any other background-related styles here */
+}
 
     /* Additional styles for iframe */
     iframe {
