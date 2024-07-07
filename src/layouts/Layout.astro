@@ -1,56 +1,33 @@
----
-export interface Props {
-	title: string;
-}
+<template>
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width" />
+            <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1074435296978026588/1254337465137893446/ezgif-7-2eaf8a8b05.gif?ex=668b954c&is=668a43cc&hm=4df297125c897218beba07d28f2d96687be5572ae70df25d917c33f53dcb6bb6&?" />
+            <meta name="generator" content={Astro.generator} />
+            <meta name="description" content="Orbit's Website" />
+            <meta content="Orbit" property="og:title" />
+            <meta content="Orbit's Website" property="og:description" />
+            <meta content="https://orbitingastronautdev-orbitingastronauts-projects.vercel.app/" property="og:url" />
+            <meta content="https://cdn.discordapp.com/attachments/1074435296978026588/1254337465137893446/ezgif-7-2eaf8a8b05.gif?ex=668b954c&is=668a43cc&hm=4df297125c897218beba07d28f2d96687be5572ae70df25d917c33f53dcb6bb6&" property="og:image" />
+            <meta content="#ba132d" data-react-helmet="true" name="theme-color" />
+            <title>{title}</title>
+            <link rel="me" href="https://floss.social/@O4bit">
+        </head>
+        <body class="fixed h-screen">
+            <div class="w-screen h-screen flex bg-gradient-to-r from-[#12c2e9] via-[#c471ed] to-[#f64f59] background-animate">
+                <slot />
+            </div>
 
-const { title } = Astro.props;
----
-
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1074435296978026588/1254337465137893446/ezgif-7-2eaf8a8b05.gif?ex=668b954c&is=668a43cc&hm=4df297125c897218beba07d28f2d96687be5572ae70df25d917c33f53dcb6bb6&?" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Orbit's Website" />
-		<meta content="Orbit" property="og:title" />
-		<meta content="Orbit's Website" property="og:description" />
-		<meta content="https://orbitingastronautdev-orbitingastronauts-projects.vercel.app/" property="og:url" />
-		<meta content="https://cdn.discordapp.com/attachments/1074435296978026588/1254337465137893446/ezgif-7-2eaf8a8b05.gif?ex=668b954c&is=668a43cc&hm=4df297125c897218beba07d28f2d96687be5572ae70df25d917c33f53dcb6bb6&" property="og:image" />
-		<meta content="#ba132d" data-react-helmet="true" name="theme-color" />
-		<title>{title}</title>
-        <link rel="me" href="https://floss.social/@O4bit">
-	</head>
-	<body class="fixed h-screen">
-		<div
-			class="w-screen h-screen flex bg-gradient-to-r from-[#12c2e9] via-[#c471ed] to-[#f64f59] background-animate"
-		>
-			<slot />
-		</div>
-	</body>
-</html>
-
-<style>
-    [data-icon] {
-        font-size: 2rem;
-    }
-
-	.background-animate {
-		background-size: 400%;
-
-		-webkit-animation: GradientAnimation 20s ease infinite;
-		-moz-animation: GradientAnimation 20s ease infinite;
-		animation: GradientAnimation 20s ease infinite;
-	}
-
-	@keyframes GradientAnimation {
-		0%,
-		100% {
-			background-position: 0% 50%;
-		}
-		50% {
-			background-position: 100% 50%;
-		}
-	}
-</style>
+            <!-- Discord Widget iframe -->
+            <iframe src="https://discord.com/widget?id=1217882427280855111&theme=dark"
+                    width="350"
+                    height="500"
+                    allowtransparency="true"
+                    frameborder="0"
+                    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+            </iframe>
+        </body>
+    </html>
+</template>
