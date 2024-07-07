@@ -1,87 +1,92 @@
+// Import necessary modules
 import { Astro } from "@astro/types";
 
+// Define Props interface
 interface Props {
     title: string;
 }
 
+// Extract title from Astro props
 const { title } = Astro.props;
 
-const Page = ({ title }: Props) => (
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1074435296978026588/1254337465137893446/ezgif-7-2eaf8a8b05.gif?ex=668b954c&is=668a43cc&hm=4df297125c897218beba07d28f2d96687be5572ae70df25d917c33f53dcb6bb6&?" />
-        <meta name="generator" content={Astro.generator} />
-        <meta name="description" content="Orbit's Website" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content="Orbit's Website" />
-        <meta property="og:url" content="https://orbitingastronautdev-orbitingastronauts-projects.vercel.app/" />
-        <meta property="og:image" content="https://cdn.discordapp.com/attachments/1074435296978026588/1254337465137893446/ezgif-7-2eaf8a8b05.gif?ex=668b954c&is=668a43cc&hm=4df297125c897218beba07d28f2d96687be5572ae70df25d917c33f53dcb6bb6&" />
-        <meta name="theme-color" content="#ba132d" />
-        <title>{title}</title>
-        <link rel="me" href="https://floss.social/@O4bit">
-        <style>
-            body {
-                margin: 0;
-                font-family: Arial, sans-serif;
-                background-color: #111; /* Dark mode background color */
-                color: #fff; /* Text color for dark mode */
-                overflow: hidden; /* Prevent scrolling */
-                position: relative;
-                height: 100vh;
-            }
-    
-            .background-video {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-                opacity: 0.8; /* Adjust transparency */
-            }
-    
-            /* Glossy effect */
-            .overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)); /* Glossy transparent overlay */
-                z-index: -1;
-            }
-    
-            /* Adjust iframe styles */
-            iframe {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                border: none;
-                overflow: hidden;
-                z-index: 9999;
-            }
-        </style>
-    </head>
-    <body>
-        {/* Video background */}
-        <video class="background-video" autoplay loop muted>
-            <source src="https://cdn.discordapp.com/attachments/1074435296978026588/1259591662192033903/4K_Sci-Fi_Black_Hole.mp4?ex=668c3da6&is=668aec26&hm=3fc654fcb49909588714da0012fe67d62873f494d3103e81c3bbff0f1a47e066" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    
-        {/* Glossy overlay */}
-        <div class="overlay"></div>
-    
-        {/* Content */}
-        <slot />
-    
-        {/* Optional: Iframe for additional content */}
-        <iframe src="https://example.com"></iframe>
-    </body>
-    </html>
-);
+// Define the Astro component
+const Page = ({ title }: Props) => {
+    return (
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1074435296978026588/1254337465137893446/ezgif-7-2eaf8a8b05.gif?ex=668b954c&is=668a43cc&hm=4df297125c897218beba07d28f2d96687be5572ae70df25d917c33f53dcb6bb6&?" />
+                <meta name="generator" content={Astro.generator} />
+                <meta name="description" content="Orbit's Website" />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content="Orbit's Website" />
+                <meta property="og:url" content="https://orbitingastronautdev-orbitingastronauts-projects.vercel.app/" />
+                <meta property="og:image" content="https://cdn.discordapp.com/attachments/1074435296978026588/1254337465137893446/ezgif-7-2eaf8a8b05.gif?ex=668b954c&is=668a43cc&hm=4df297125c897218beba07d28f2d96687be5572ae70df25d917c33f53dcb6bb6&" />
+                <meta name="theme-color" content="#ba132d" />
+                <title>{title}</title>
+                <link rel="me" href="https://floss.social/@O4bit" />
+                <style>
+                    body {
+                        margin: 0;
+                        font-family: Arial, sans-serif;
+                        background-color: #111; /* Dark mode background color */
+                        color: #fff; /* Text color for dark mode */
+                        overflow: hidden; /* Prevent scrolling */
+                        position: relative;
+                        height: 100vh;
+                    }
+
+                    .background-video {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: -1;
+                        opacity: 0.8; /* Adjust transparency */
+                    }
+
+                    /* Glossy effect */
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)); /* Glossy transparent overlay */
+                        z-index: -1;
+                    }
+
+                    /* Adjust iframe styles */
+                    iframe {
+                        position: fixed;
+                        bottom: 20px;
+                        right: 20px;
+                        border: none;
+                        overflow: hidden;
+                        z-index: 9999;
+                    }
+                </style>
+            </head>
+            <body>
+                {/* Video background */}
+                <video class="background-video" autoplay loop muted>
+                    <source src="https://cdn.discordapp.com/attachments/1074435296978026588/1259591662192033903/4K_Sci-Fi_Black_Hole.mp4?ex=668c3da6&is=668aec26&hm=3fc654fcb49909588714da0012fe67d62873f494d3103e81c3bbff0f1a47e066" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            
+                {/* Glossy overlay */}
+                <div class="overlay"></div>
+            
+                {/* Content */}
+                <slot />
+            
+                {/* Optional: Iframe for additional content */}
+                <iframe src="https://example.com"></iframe>
+            </body>
+        </html>
+    );
+};
 
 export default Page;
