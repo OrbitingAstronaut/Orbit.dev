@@ -1,10 +1,12 @@
-import { Astro } from "@astro/types";
+// File: index.astro
 
+---
+import { Astro } from "@astro/types";
 export interface Props {
     title: string;
 }
-
 const { title } = Astro.props;
+---
 
 <!DOCTYPE html>
 <html lang="en">
@@ -62,5 +64,11 @@ const { title } = Astro.props;
         }
     </style>
 </head>
+<body>
+    <div class="content-wrapper">
+        <h1>Welcome to Orbit's Website</h1>
+        <p>Explore and enjoy our content!</p>
+        <a href="https://orbitingastronautdev-orbitingastronauts-projects.vercel.app/" target="_blank" rel="noopener noreferrer">Visit Website</a>
+    </div>
+</body>
 </html>
-
