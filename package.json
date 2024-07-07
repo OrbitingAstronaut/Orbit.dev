@@ -1,5 +1,5 @@
 {
-	"name": "ithundxr.dev",
+	"name": "o4bit.dev",
 	"version": "1.0.0",
 	"type": "module",
 	"private": true,
@@ -35,10 +35,10 @@
 		"type": "git",
 		"url": "git+https://github.com/IThundxr/ithundxr.dev.git"
 	},
-	"author": "IThundxr",
+	"author": "o4bit",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/IThundxr/ithundxr.dev/issues"
+		"url": "https://github.com/orbitingastronaut"
 	},
-	"homepage": "https://github.com/IThundxr/ithundxr.dev#readme"
+	"homepage": "https://github.com/orbitingastronaut/O4bit#readme"
 }

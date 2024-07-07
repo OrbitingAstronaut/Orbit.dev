@@ -7,6 +7,6 @@ import robotsTxt from "astro-robots-txt";
 import icon from "astro-icon";
 
 export default defineConfig({
-	site: "https://ithundxr.dev",
+	site: "https://orbitingastronautdev-orbitingastronauts-projects.vercel.app",
 	integrations: [react(), tailwind(), sitemap(), robotsTxt(), icon()],
 });
