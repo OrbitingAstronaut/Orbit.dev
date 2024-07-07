@@ -10,42 +10,68 @@ const { title } = Astro.props;
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1074435296978026588/1254337465137893446/ezgif-7-2eaf8a8b05.gif?ex=668b954c&is=668a43cc&hm=4df297125c897218beba07d28f2d96687be5572ae70df25d917c33f53dcb6bb6&?" />
-    <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1074435296978026588/1254337465137893446/ezgif-7-2eaf8a8b05.gif?ex=668b954c&is=668a43cc&hm=4df297125c897218beba07d28f2d96687be5572ae70df25d917c33f53dcb6bb6&" />
     <meta name="description" content="Orbit's Website" />
-    <meta content="Orbit" property="og:title" />
-    <meta content="Orbit's Website" property="og:description" />
-    <meta content="https://orbitingastronautdev-orbitingastronauts-projects.vercel.app/" property="og:url" />
-    <meta content="https://cdn.discordapp.com/attachments/1074435296978026588/1254337465137893446/ezgif-7-2eaf8a8b05.gif?ex=668b954c&is=668a43cc&hm=4df297125c897218beba07d28f2d96687be5572ae70df25d917c33f53dcb6bb6&" property="og:image" />
-    <meta content="#ba132d" data-react-helmet="true" name="theme-color" />
+    <meta property="og:title" content="{title}" />
+    <meta property="og:description" content="Orbit's Website" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://orbitingastronautdev-orbitingastronauts-projects.vercel.app/" />
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1074435296978026588/1259584355421126779/ezgif-3-5114a63fef.gif?ex=668c36d8&is=668ae558&hm=e207ca7dcfca144211ed09c375e5475c393141d6731ebf244954e2e450a02752&" />
+    <meta name="theme-color" content="#ba132d" />
     <title>{title}</title>
     <link rel="me" href="https://floss.social/@O4bit">
     <style>
         body {
-            margin: 0; /* Remove default margin */
-            font-family: Arial, sans-serif; /* Optional: Set your preferred font */
-        }
-        .background-animate {
+            margin: 0;
+            font-family: Arial, sans-serif;
             background-image: url('https://cdn.discordapp.com/attachments/1074435296978026588/1259584355421126779/ezgif-3-5114a63fef.gif?ex=668c36d8&is=668ae558&hm=e207ca7dcfca144211ed09c375e5475c393141d6731ebf244954e2e450a02752&');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed; /* Keeps background fixed while scrolling */
-            /* Add any other background-related styles here */
+            filter: brightness(0.8); /* Dark mode effect */
         }
-        /* Adjust iframe styles */
-        iframe {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            border: none;
-            overflow: hidden;
-            z-index: 9999;
+        .content-wrapper {
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6); /* Glossy-transparent overlay */
+            backdrop-filter: blur(10px); /* Blur effect for glossy look */
+            padding: 20px;
+        }
+        .content-wrapper h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .content-wrapper p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .content-wrapper a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1E90FF;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .content-wrapper a:hover {
+            background-color: #0077FF;
         }
     </style>
 </head>
-<body class="background-animate fixed h-screen">
-    <slot />
+<body>
+    <div class="content-wrapper">
+        <h1>{title}</h1>
+        <p>Welcome to Orbit's Website</p>
+        <a href="https://orbitingastronautdev-orbitingastronauts-projects.vercel.app/">Visit Website</a>
+    </div>
 </body>
 </html>
