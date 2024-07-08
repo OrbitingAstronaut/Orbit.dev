@@ -9,4 +9,11 @@ import icon from "astro-icon";
 export default defineConfig({
 	site: "https://orbitingastronautdev-orbitingastronauts-projects.vercel.app",
 	integrations: [react(), tailwind(), sitemap(), robotsTxt(), icon()],
+	vite: {
+		build: {
+			rollupOptions: {
+				external: ['virtual:image-loader']
+			}
+		}
+	}
 });
