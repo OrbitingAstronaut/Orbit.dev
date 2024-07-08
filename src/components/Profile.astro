@@ -1,6 +1,7 @@
 ---
 import RoundButton from "./RoundButton.astro";
 import { Image } from 'astro:assets';
+import profileImage from '/public/ezgif-7-2eaf8a8b05.gif';
 ---
 
 <div class="w-screen h-screen flex justify-center items-center">
@@ -11,13 +12,13 @@ import { Image } from 'astro:assets';
 		<p class="text-center text-1xl">
 			I find space pretty cool<br /> and I also like astronauts and am good at math :3
 		</p>
-			<Image
-				src="ezgif-7-2eaf8a8b05.gif"
-				class="rounded-full w-32 h-32 mx-auto border-2 border-black backdrop-blur"
-				alt="o4bit"
-				height="128"
-				width="128"
-				loading="eager"
+		<Image
+		src={profileImage}
+		class="rounded-full w-32 h-32 mx-auto border-2 border-black backdrop-blur"
+		alt="o4bit"
+		height="128"
+		width="128"
+		loading="eager"
 			/>
 		<div class="flex justify-center">
 			<RoundButton
