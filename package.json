@@ -1,5 +1,5 @@
 {
-	"name": "o4bit.dev",
+	"name": "Orbit.dev",
 	"version": "1.0.0",
 	"type": "module",
 	"private": true,
@@ -13,33 +13,32 @@
 		"preview": "astro preview",
 		"astro": "astro",
 		"preinstall": "npx only-allow pnpm"
-	},	
-"dependencies": {
-	"@astrojs/react": "^3.0.10",
-	"@astrojs/sitemap": "^3.1.1",
-	"@astrojs/tailwind": "^5.1.0",
-	"@iconify-json/akar-icons": "^1.1.23",
-	"@iconify-json/bi": "^1.1.23",
-	"@iconify-json/bx": "^1.1.10",
-	"@iconify-json/ic": "^1.1.17",
-	"@types/react": "^18.2.59",
-	"@types/react-dom": "^18.2.19",
-	"astro": "^4.4.5",
-	"astro-icon": "^1.1.0",
-	"astro-robots-txt": "^1.0.0",
-	"react": "^18.2.0",
-	"react-dom": "^18.2.0",
-	"sharp": "^0.29.0",
-	"tailwindcss": "^3.4.1"
-},
+	},
+	"dependencies": {
+		"@astrojs/react": "^3.0.10",
+		"@astrojs/sitemap": "^3.1.1",
+		"@astrojs/tailwind": "^5.1.0",
+		"@iconify-json/akar-icons": "^1.1.23",
+		"@iconify-json/bi": "^1.1.23",
+		"@iconify-json/bx": "^1.1.10",
+		"@iconify-json/ic": "^1.1.17",
+		"@types/react": "^18.2.59",
+		"@types/react-dom": "^18.2.19",
+		"astro": "^4.4.5",
+		"astro-icon": "^1.1.0",
+		"astro-robots-txt": "^1.0.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"tailwindcss": "^3.4.1"
+	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/IThundxr/ithundxr.dev.git"
+		"url": "git+https://github.com/orbitingastronaut/orbit.dev.git"
 	},
-	"author": "o4bit",
+	"author": "O4bit",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/orbitingastronaut"
+		"url": "https://github.com/orbitingastronaut/orbit.dev/issues"
 	},
-	"homepage": "https://github.com/orbitingastronaut/O4bit#readme"
+	"homepage": "https://github.com/orbitingastronaut/orbit.dev#readme"
 }
